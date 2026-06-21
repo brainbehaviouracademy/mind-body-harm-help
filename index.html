@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mind &amp; Body Activity Classifier</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Mind &amp; Body Activity Classifier</h1>
+<p class="subtitle">Drag each activity into the quadrant where it belongs</p>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <h2>Add Activity</h2>
+    <div class="add-form">
+      <div class="add-form-row">
+        <input type="text" id="new-activity-emoji" placeholder="😀" maxlength="4">
+        <input type="text" id="new-activity-name" placeholder="Activity name" maxlength="30">
+        <input type="color" id="new-activity-color" value="#3b82f6">
+      </div>
+      <button id="add-btn">Add Activity</button>
+    </div>
+    <h2>Activities</h2>
+    <div id="activity-pool"></div>
+  </div>
+
+  <div class="grid-wrapper">
+    <div></div>
+    <div class="axis-label top-mind">MIND</div>
+    <div class="axis-label top-body">BODY</div>
+
+    <div class="axis-label y-axis-label left-helpful">HELPFUL</div>
+    <div class="quadrant" id="q-helpful-mind" data-zone="helpful-mind">
+      <div class="quadrant-title">🧠✅ Helpful · Mind</div>
+    </div>
+    <div class="quadrant" id="q-helpful-body" data-zone="helpful-body">
+      <div class="quadrant-title">💪✅ Helpful · Body</div>
+    </div>
+
+    <div class="axis-label y-axis-label left-harmful">HARMFUL</div>
+    <div class="quadrant" id="q-harmful-mind" data-zone="harmful-mind">
+      <div class="quadrant-title">🧠⚠️ Harmful · Mind</div>
+    </div>
+    <div class="quadrant" id="q-harmful-body" data-zone="harmful-body">
+      <div class="quadrant-title">💪⚠️ Harmful · Body</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="controls">
+  <button id="reset-btn">Reset Board</button>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
